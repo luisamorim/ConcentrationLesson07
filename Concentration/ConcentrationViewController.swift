@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ConcentrationViewController: UIViewController
 {
     
     private lazy var game = Concentration(numberOfPairsOfCards:numberOfPairOfCards )
@@ -32,8 +32,7 @@ class ViewController: UIViewController
     @IBAction private func touchCard(_ sender: UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.index(of: sender){
-            //game.chooseCard(at: cardNumber)
-            game.chooseCard(at: 200)
+            game.chooseCard(at: cardNumber)
             updateViewFromModel()
         }else{
             print("chose cars was not in cardButtons")
